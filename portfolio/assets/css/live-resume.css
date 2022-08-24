@@ -7810,7 +7810,7 @@ main {
           width: calc( 50% - 10px); } }
       main .client-logos-wrapper .client-logo img {
         max-width: 100%;
-        max-height: 55px; }
+        max-height: 30px; }
   main .achievements-section {
     margin-bottom: 29px; }
   main .achievement-cards-wrapper {
