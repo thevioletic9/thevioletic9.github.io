@@ -8312,7 +8312,7 @@ main {
 .life {
   position: relative;
   left: 380px;
-  bottom: 50px;
+  bottom: 90px;
   font-family: 'Londrina Solid', cursive;
 
 }
@@ -8320,7 +8320,7 @@ main {
 .life2 {
   position: relative;
   left: 430px;
-  bottom: 50px;
+  bottom: 80px;
   font-family: 'Londrina Solid', cursive;
 
 }
@@ -8329,7 +8329,6 @@ main {
   position: relative;
   left: -800px;
   bottom: -60px;
-
   height: 100px;
 }
 
