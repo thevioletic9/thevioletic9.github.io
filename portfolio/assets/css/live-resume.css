@@ -7434,7 +7434,7 @@ aside .profile-img-wrapper {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    padding: 5px; }
+    padding: 10px; }
 
 aside .profile-name {
   font-size: 18px;
@@ -7527,7 +7527,8 @@ aside .widget {
     box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2); }
 
 .btn-download-cv {
-  padding: 6px 30px; }
+  padding: 6px 30px;
+  background-color:#F4ECFF; }
 
 .btn-hire-me {
   font-size: 9px;
@@ -8405,4 +8406,40 @@ main {
     -ms-transition: all 0.4s;
     transition: all 0.4s;
 }
+
+.button-1 {
+  -webkit-transition: all .15s ease-in-out;
+  transition: all .15s ease-in-out;
+}
+.button-1:hover {
+  box-shadow: 0 0 10px 0 #FFB2D1 inset, 0 0 20px 2px #FFB2D1;
+  border: 1px solid #FFB2D1;
+  color: #FFB2D1;
+}
+
+.button-2 {
+  -webkit-transition: all .15s ease-in-out;
+  transition: all .15s ease-in-out;
+}
+.button-2:hover {
+  box-shadow: 0 0 2px 0 #FFB2D1 inset, 0 0 5px 2px #FFB2D1;
+  border: 1px solid #FFB2D1;
+  color: #FFB2D1;
+}
+
+
+
+.parent {
+  border: 1px solid black;
+  margin: 1rem;
+  padding: 2rem 2rem;
+
+}
+.child {
+
+  border: 1px solid red;
+  padding: 1rem 1rem;
+  vertical-align: middle;
+}
+
 /*# sourceMappingURL=live-resume.css.map */
