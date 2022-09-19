@@ -7496,17 +7496,19 @@ aside .widget {
   font-size: 0.75rem;
   font-weight: 500;
   line-height: 1.67;
-  height: 30px; }
+  height: 50px;
+  background-color: #F4ECFF;
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2); }
   .btn-share:hover, .btn-share:focus, .btn-share:active {
-    background-color: #ffffff;
+    background-color: #F4ECFF;
     border: 0; }
   .btn-share:focus {
-    box-shadow: none; }
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2); }
   .btn-share:hover {
     box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2); }
 
 .btn-img {
-  height: 10px;
+  height: 40px;
   margin-right: 6px; }
 
 .btn-menu-toggle {
@@ -7515,14 +7517,16 @@ aside .widget {
   height: 35px;
   border: 0;
   line-height: 10px;
-  transition: all 0.2s ease-in-out; }
+  background-color: #F4ECFF;
+  transition: all 0.2s ease-in-out; 
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2);}
   .btn-menu-toggle img {
     height: 10px; }
   .btn-menu-toggle:hover, .btn-menu-toggle:focus, .btn-menu-toggle:active {
-    background-color: #ffffff;
-    border: 0; }
+    background-color: #F4ECFF;
+    border: 0;}
   .btn-menu-toggle:focus {
-    box-shadow: none; }
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2); }
   .btn-menu-toggle:hover {
     box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2); }
 
@@ -7541,6 +7545,7 @@ header {
   padding-left: 240px;
   padding-top: 16px;
   padding-bottom: 16px;
+  z-index: 1000;
 
   }
 
@@ -7552,7 +7557,7 @@ header {
   margin-right: 10px;
   transition: width 0.6s ease-in-out; }
   .collapsible-nav.show {
-    width: 365px; }
+    width: 380px; }
   @media (max-width: 991px) {
     .collapsible-nav {
       position: fixed;
@@ -7562,7 +7567,7 @@ header {
       flex-direction: column;
       top: 71px;
       align-items: flex-start;
-      background-color: #ffffff;
+      background-color: #F4ECFF;
       margin-right: 0;
       padding-left: 24px;
       padding-right: 24px;
@@ -7586,8 +7591,8 @@ header {
         margin: 15px 0;
         height: auto; } }
     .collapsible-nav .nav-link.active {
-      color: #0067f6;
-      border-bottom: 2px solid #0067f6;
+      color: #F4ECFF;
+      border-bottom: 2px solid #F08080;
       padding-bottom: 0; }
 
 body {

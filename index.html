@@ -12,7 +12,9 @@
     <link rel="icon" type="image/x-icon" href="portfolio/assets/images/programmer.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:@400&display=swap" rel="stylesheet">
+
 </head>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <style>
     .buttonMain {
         background-color:#F4ECFF;
@@ -26,18 +28,35 @@
     .fontColor {
         color: white;
     }
+
 </style>
 
 <body>
     <header>
+        <button class="btn btn-white btn-share ml-auto mr-3 ml-md-0 mr-md-auto"><img src="portfolio/assets/images/emoji.png" alt="share" class="btn-img">
+            <span href="" class="typewrite" data-period="2000" data-type='[ "Hi, my name is Alia Nabila.","I love to explore new things.", "I am Creative.", "I Love to Develop.","I am currently doing project.","Do have a look in few weeks.","Thank you for visiting my site!" ]'>
+                <span class="wrap"></span>
+            </span></button>
+        <nav class="collapsible-nav" id="collapsible-nav">
+            <a href="index.html" class="nav-link">HOME</a>
+            <a href=#section1 class="nav-link">EDUCATION</a>
+            <a href=#section2 class="nav-link">EXPERIENCE</a>
+            <a href=#section3 class="nav-link">SKILLS</a>
+            <a href=#section4 class="nav-link">PROJECT</a>
+        </nav>
+        <button class="btn btn-menu-toggle rounded-circle" data-toggle="collapsible-nav"
+            data-target="collapsible-nav"><img src="portfolio/assets/images/hamburgerPink.svg" alt="hamburger"></button>
+    </header>
+    <!--<header>
         <div>
             <img src="portfolio/assets/images/emoji.png" class="emojis" alt="profile">
             <h5 class="lifea">Hi, my name is</h5>
             <h1 class="life">Alia Nabila</h1>
-            <h2 class="life2">I build things with programming</h2>
+            <h2 class="life2" >I build things with programming</h2>
             <h6 class="life3">I'm a software developer specializing in building (sometimes design) for web and system</h6>
         </div>
-    </header>
+    </header> -->
+ 
     <div class="content-wrapper">
         <div class="social_media_div">
             <ul class="icons_list">
@@ -104,7 +123,6 @@
             </div>
         </aside>
         <main class="block">
-            
             <section class="intro-section">
                 <div class="col-lg-12">
                     <div class="justify-content-center">
@@ -122,7 +140,7 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <!--<h6 class="section-subtitle">RESUME</h6> -->
-                        <h2 class="section-title">EDUCATION</h2>
+                        <h2 class="section-title" id="section1">EDUCATION</h2>
                         <ul class="time-line" >
                             <li class="time-line-item">
                                 <span class="badge buttonPink" style="font-size: 13px;">2020 - 2022</span>
@@ -190,7 +208,7 @@
                     </div>
                     <div class="col-lg-6">
                         <!--<h6 class="section-subtitle">RESUME</h6>-->
-                        <h2 class="section-title">Experience</h2>
+                        <h2 class="section-title" id="section2">Experience</h2>
                         <ul class="time-line">
                             <li class="time-line-item">
                                 <span class="badge buttonPink" style="font-size: 13px;">2022</span>
@@ -240,7 +258,7 @@
             </section>
             <section class="clients-section">
                 <!-- <h6 class="section-subtitle">WHAT I DO</h6> -->
-                <h2 class="section-title">Skills</h2>
+                <h2 class="section-title" id="section3">Skills</h2>
                 <div class="client-logos-wrapper">
                     <div class="client-logo" ><img src="portfolio/assets/images/java.svg" alt="java" class="w-100" style="max-height: 50px;"></div>
                     <div class="client-logo"><img src="portfolio/assets/images/js.svg" alt="js" class="w-100" style="max-height: 50px;"></div>
@@ -293,7 +311,7 @@
                 </div>
             </section> -->
             <section class="blog-section">
-                <h2 class="section-title">PROJECTS</h2>
+                <h2 class="section-title" id="section4">PROJECTS</h2>
                 <div class="blog-posts-wrapper">
                     <article class="blog-post">
                         <a href="https://github.com/thevioletic9/AMSB_IT_Dashboard" class="blog-post-link">
@@ -338,5 +356,62 @@
     <script src="portfolio/assets/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="portfolio/assets/js/live-resume.js"></script>
 </body>
+<script>
+var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
 
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+        }
+
+        setTimeout(function() {
+        that.tick();
+        }, delta);
+    };
+
+    window.onload = function() {
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+              new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+        document.body.appendChild(css);
+    };
+ </script>
 </html>
